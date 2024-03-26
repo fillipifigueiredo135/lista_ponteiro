@@ -46,12 +46,14 @@ p+1 = local de armazenamento do ponteiro com um acréscimo de (de acordo com a q
 <Questão 3:>
 
 *q = &j;
-
 Ilegal. Isso ocorre porque *q é um valor inteiro (devido à sua declaração como int *q), e você está tentando atribuir a ele o endereço de j, o que resulta em um tipo incompatível.
+
 i = (*&)j;
 Ilegal. A expressão (*&)j não tem um significado válido em C, pois você está tentando desreferenciar o endereço de j, o que não faz sentido.
+
 q = *p;
 Ilegal. Você está tentando atribuir a um ponteiro (q) o valor inteiro apontado por outro ponteiro (p), o que não é permitido em C sem uma conversão explícita.
+
 i = (*p)++ + *q;
 Ilegal. Isso ocorre porque (*p)++ é um operador inválido para um ponteiro e *q também está tentando desreferenciar um ponteiro sem que ele esteja apontando para algo válido. Além disso, a expressão não está claramente definida em termos de comportamento definido em C.
 
