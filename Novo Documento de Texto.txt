@@ -1,0 +1,66 @@
+Questão 1)
+
+◦ p == &i;
+Verifica se p está apontando para o endereço de i
+
+◦ *p - *q;
+Subtrai os valores armazenados nos ponteiros
+
+◦ **&p;
+&p obtém o endereço de memória do ponteiro p.
+  com (*) desreferencia esse endereço, o que significa que estamos acessando o valor apontado pelo ponteiro p
+(endereço de memória de i), o valor de *p será o valor de i, que é 3.
+  Por fim, (*) desreferencia novamente, o que significa que estamos acessando o valor apontado por *p, ou seja, o valor de i.
+
+◦ 3 - *p/(*q) + 7;
+(Está realizando a equação:
+ 3 - [elemento de P]/[elemento de Q] + 7
+3 - 0 +7 = 10)
+
+
+
+
+Questão 2)
+
+main(){
+  int i=5, *p;
+  p = &i;
+  printf("%p %p %d %d %d %d\n", p, p+1, *p+2, **&p, 3**p, **&p+4);
+}
+p = onde o ponteiro armazena dados. de acordo com a questão (4094) 
+p+1 = local de armazenamento do ponteiro com um acréscimo de (de acordo com a questão) 2 bytes. (4096) supostamente
+*p+2 = Elemento armazenado no ponteiro (i [i=5]) + 2, resultando em 7.
+**&p = uma forma diferente de expressar o valor apontado por *p (5)
+3**p = 3 multiplicando o elemento de p (15)
+**&p+4 = o elemento de p somado a 4 (9)
+
+
+
+Questão 3)
+*q = &j;
+Ilegal. Isso ocorre porque *q é um valor inteiro (devido à sua declaração como int *q), e você está tentando atribuir a ele o endereço de j, o que resulta em um tipo incompatível.
+i = (*&)j;
+Ilegal. A expressão (*&)j não tem um significado válido em C, pois você está tentando desreferenciar o endereço de j, o que não faz sentido.
+q = *p;
+Ilegal. Você está tentando atribuir a um ponteiro (q) o valor inteiro apontado por outro ponteiro (p), o que não é permitido em C sem uma conversão explícita.
+i = (*p)++ + *q;
+Ilegal. Isso ocorre porque (*p)++ é um operador inválido para um ponteiro e *q também está tentando desreferenciar um ponteiro sem que ele esteja apontando para algo válido. Além disso, a expressão não está claramente definida em termos de comportamento definido em C.
+
+
+
+Questão 6)
+ resposta: *(pulo + 2); (valor do terceiro elemento do vetor)
+
+ resto:
+[*(pulo + 4); (quinto elemento do vetor)]
+[pulo + 4; (quinto endereço de memoria)]
+[pulo + 2; (terceiro endereço de memoria do ponteiro)]
+
+
+
+Questão 7)
+todas validas
+
+p = mat + 1; (atribui ao ponteiro p o endereço do segundo elemento do vetor mat)
+p = mat; (atribui ao ponteiro p o endereço do primeiro elemento do vetor mat)
+x = (mat); (atribui à variável x o valor do *primeiro elemento do vetor mat)
