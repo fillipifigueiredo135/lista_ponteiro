@@ -8,7 +8,8 @@ Maria Estefsnny
 
 
 
-Questão 1:
+>Questão 1:<
+
 ◦ p == &i;
 Verifica se p está apontando para o endereço de i
 
