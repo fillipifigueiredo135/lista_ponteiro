@@ -8,7 +8,7 @@ Maria Estefsnny
 
 
 
-Questão 1)
+Questão 1:
 ◦ p == &i;
 Verifica se p está apontando para o endereço de i
 
@@ -27,7 +27,7 @@ Subtrai os valores armazenados nos ponteiros
 3 - 0 +7 = 10)
 
 
-Questão 2)
+Questão 2:
 main(){
   int i=5, *p;
   p = &i;
@@ -42,7 +42,7 @@ p+1 = local de armazenamento do ponteiro com um acréscimo de (de acordo com a q
 
 
 
-Questão 3)
+Questão 3:
 *q = &j;
 Ilegal. Isso ocorre porque *q é um valor inteiro (devido à sua declaração como int *q), e você está tentando atribuir a ele o endereço de j, o que resulta em um tipo incompatível.
 i = (*&)j;
@@ -52,11 +52,11 @@ Ilegal. Você está tentando atribuir a um ponteiro (q) o valor inteiro apontado
 i = (*p)++ + *q;
 Ilegal. Isso ocorre porque (*p)++ é um operador inválido para um ponteiro e *q também está tentando desreferenciar um ponteiro sem que ele esteja apontando para algo válido. Além disso, a expressão não está claramente definida em termos de comportamento definido em C.
 
-Questão 4)
+Questão 4:
 
-Questão 5)
+Questão 5:
 
-Questão 6)
+Questão 6:
  resposta: *(pulo + 2); (valor do terceiro elemento do vetor)
  resto:
 [*(pulo + 4); (quinto elemento do vetor)]
@@ -65,24 +65,24 @@ Questão 6)
 
 
 
-Questão 7)
+Questão 7:
 todas validas
 p = mat + 1; (atribui ao ponteiro p o endereço do segundo elemento do vetor mat)
 p = mat; (atribui ao ponteiro p o endereço do primeiro elemento do vetor mat)
 x = (mat); (atribui à variável x o valor do *primeiro elemento do vetor mat)
 
-Questão 8)
+Questão 8:
 
-Questão 9)
+Questão 9:
 
-Questão 10)
+Questão 10:
 
-Questão 11)
+Questão 11:
 
-Questão 12)
+Questão 12:
 
-Questão 13)
+Questão 13:
 
-Questão 14)
+Questão 14:
 
-Questão 15)
+Questão 15:
