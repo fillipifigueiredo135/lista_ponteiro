@@ -83,6 +83,11 @@ os endereços de memória dos elementos da matriz em hexadecimal.
 
 Questão 9:
 
+Este software contém alguns erros sintáticos e lógicos.
+1 Não é possível iniciar membros de uma organização dentro de sua definição em C. 
+2. Após acessar seus membros, você declarou un ponteiro para a estrutura da teste, 
+mais não alocou memória para ela. Isso resultará em um comportamento mal definido.
+3. Você tenta acessar s->name, mas nome, não name, é o membro da estrutura. 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 10:
