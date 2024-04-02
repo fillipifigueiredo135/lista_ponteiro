@@ -73,6 +73,12 @@ x = (mat); (atribui à variável x o valor do *primeiro elemento do vetor mat)
 
 Questão 8:
 
+Este programa C também cria uma matriz chamada vet que tem três elementos: 4, 9 e 13. 
+Subsequentemente, ele repeti esse array com um loop for, mais em vez de imprimir os 
+valores dos elementos do array, ele usa a função printf() com o formato %X para imprimir
+os endereços de memória dos elementos em hexadecimal. O endereço de memória do elemento I
+no vet de matriz é representado pelo símbolo vet+i. Como resultado, o programa imprimirá
+os endereços de memória dos elementos da matriz em hexadecimal.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 9:
