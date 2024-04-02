@@ -59,8 +59,8 @@ Questão 6:
  resposta: *(pulo + 2); (valor do terceiro elemento do vetor)
  resto:
 [*(pulo + 4); (quinto elemento do vetor)]
-[pulo + 4; (quinto endereço de memoria)]
-[pulo + 2; (terceiro endereço de memoria do ponteiro)]
+[pulo + 4; (quinto endereço de memória)]
+[pulo + 2; (terceiro endereço de memória do ponteiro)]
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 7:
@@ -92,6 +92,21 @@ mais não alocou memória para ela, antes de acessar seuss membros. Isso resulta
 
 Questão 10:
 
+O código fornecido tem um erro. 
+Você está tentando modificar um valor constante, 
+o que resultará em um erro de compilação.
+A modificação a um valor constante sem atribuir um endereço de memória válido, impossibilita o uso do codigo.
+um modo de corrigir o código seria essa alteração:
+
+#include <stdio.h>
+
+int main() {
+    int const x = (int)malloc(sizeof(int));
+    *x = 3;
+    printf("%d", ++(*x));
+    free((int*)x);
+    return 0;
+}
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 11:
