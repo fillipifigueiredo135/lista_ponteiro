@@ -111,6 +111,31 @@ int main() {
 
 Questão 11:
 
+Comandos válidos:
+
+1. aloha[2] = value;: Atribui o valor da variável `value`
+à terceira posição do array `aloha`.
+2. coisas[4][4] = aloha[3];`: Atribui o valor do quarto 
+elemento do array `aloha` à posição `[4][4]` do array `coisas`.
+3. `pf = &value;`: Atribui o endereço de `value` ao ponteiro `pf`.
+4. `pf = &aloha[0];`: Atribui o endereço do primeiro elemento
+do array `aloha` ao ponteiro `pf`.
+
+Comandos Inválidos:
+
+1. `scanf("%f", &aloha);`: Não é válido porque `scanf` espera
+um ponteiro para o primeiro elemento do array, não para o array inteiro.
+2. `aloha = "value";`: Não é válido porque está tentando atribuir uma 
+string a um array de floats.
+3. `printf("%f", aloha);`: Não é válido porque `printf` espera um valor 
+float, não um array de floats.
+4. `coisas[5] = aloha;`: Não é válido porque você não pode atribuir um 
+array inteiro a uma posição de um array multidimensional.
+5. `pf = value;`: Não é válido porque `pf` é um ponteiro para float, e 
+`value` é um float. Para atribuir o endereço de `value` a `pf`, usamos `pf = &value;`.
+6. `pf = aloha;`: Não é válido porque `pf` é um ponteiro para float, mas
+`aloha` é um array de floats. Para fazer isso, usamos `pf = &aloha[0];` para apontar
+para o primeiro elemento de `aloha`.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 12:
