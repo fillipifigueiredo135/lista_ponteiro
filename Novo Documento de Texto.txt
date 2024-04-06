@@ -139,6 +139,15 @@ para o primeiro elemento de `aloha`.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 12:
+Memory leak refere-se a um erro de programação
+em que uma aplicação aloca dinamicamente e falha em liberá-la
+quando não é mais necessária. O programa pode usar memoria excessiva
+com o tempo, podendo levar um mal desempenho através de falhas e 
+até mesmo travamento do sistema , devido à falta de memória disponível.
+
+A seguir está três exemplos de programas em C que apresenta 
+memory leaks:
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
