@@ -233,6 +233,56 @@ sem liberação. Ocasionando um memory leak.
 
 Questão 14:
 
+Um ponteiro para uma função é um tipo de variável 
+que armazena o endereço de memória de uma função. Isso permite que a função 
+seja referenciada e invocada indiretamente através do ponteiro.
+
+Aqui está um exemplo em C que demonstra o uso de um ponteiro para uma função:
+
+```c
+#include <stdio.h>
+
+// Função de soma
+int soma(int a, int b) {
+    return a + b;
+}
+
+// Função de subtração
+int subtracao(int a, int b) {
+    return a - b;
+}
+
+int main() {
+    int (*funcao)(int, int); // Declaração de um ponteiro para função
+
+    // Atribuição do endereço da função soma ao ponteiro
+    funcao = soma;
+    printf("Resultado da soma: %d\n", funcao(5, 3)); // Chamada indireta da função soma
+
+    // Atribuição do endereço da função subtracao ao ponteiro
+    funcao = subtracao;
+    printf("Resultado da subtracao: %d\n", funcao(5, 3)); // Chamada indireta da função subtracao
+
+    return 0;
+}
+```
+
+Como o programa funciona:
+
+1. `#include <stdio.h>`: Inclui a biblioteca padrão de entrada 
+e saída em C para usar as funções de entrada/saída padrão.
+2. `int soma(int a, int b)`: Define uma função chamada `soma` 
+que retorna a soma de dois inteiros.
+3. `int subtracao(int a, int b)`: Define uma função chamada 
+`subtracao` que retorna a subtração de dois inteiros.
+4. `int (*funcao)(int, int);`: Declara um ponteiro para função 
+chamado `funcao` que aceita dois inteiros como argumentos e retorna um inteiro.
+5. `funcao = soma;`: Atribui o endereço da função `soma` ao ponteiro `funcao`.
+6. `printf("Resultado da soma: %d\n", funcao(5, 3));`: Invoca a função
+`soma` indiretamente através do ponteiro `funcao` e imprime o resultado.
+7. `funcao = subtracao;`: Atribui o endereço da função `subtracao` ao ponteiro `funcao`.
+8. `printf("Resultado da subtracao: %d\n", funcao(5, 3));`: Invoca a função 
+`subtracao` indiretamente através do ponteiro `funcao` e imprime o resultado.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 15:
