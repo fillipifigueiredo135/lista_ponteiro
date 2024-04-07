@@ -27,7 +27,8 @@ main(){
   printf("%p %p %d %d %d %d\n", p, p+1, *p+2, **&p, 3**p, **&p+4);
 }
 p = onde o ponteiro armazena dados. de acordo com a questão (4094) 
-p+1 = local de armazenamento do ponteiro com um acréscimo de (de acordo com a questão) 2 bytes. (4096) supostamente
+p+1 = local de armazenamento do ponteiro com um acréscimo de
+(de acordo com a questão) 2 bytes. (4096) supostamente
 *p+2 = Elemento armazenado no ponteiro (i [i=5]) + 2, resultando em 7.
 **&p = uma forma diferente de expressar o valor apontado por *p (5)
 3**p = 3 multiplicando o elemento de p (15)
@@ -111,8 +112,19 @@ int main() {
 
 Questão 11:
 
+•Se x for declarado como (char x[4]), 
+então cada elemento ocupará 1 byte de memória.
 
+•Se x for declarado como (int x[4]), 
+então cada elemento ocupará 2 bytes de memória
+(em sistemas típicos de 32 bits) ou 4 bytes de
+memória (em sistemas típicos de 64 bits).
 
+•Se x for declarado como floats (float x[4]), 
+cada elemento ocupará 4 bytes de memória.
+
+•Se x for declarado como (double x[4]), cada
+elemento ocupará 8 bytes de memória.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 12:
@@ -156,6 +168,39 @@ até mesmo travamento do sistema , devido à falta de memória disponível.
 
 A seguir está três exemplos de programas em C que apresenta 
 memory leaks:
+
+Exemplo 1:
+
+#include <stdlib.h>
+
+int main() {
+    while(1) {
+        int *ptr = (int *)malloc(100 * sizeof(int));
+        // Não há chamada para free(ptr), então a 
+memória alocada nunca é liberada
+    }
+    return 0;
+}
+
+Neste exemplo, o programa entra em um loop infinito onde
+aloca dinamicamente memória para um array de inteiros, 
+mas nunca libera essa memória. 
+Isso resulta em um vazamento de memória contínuo.
+
+Exemplo 2:
+#include <stdlib.h>
+
+int main() {
+    int *ptr = (int *)malloc(100 * sizeof(int));
+    ptr = NULL; // Perde a referência para 
+a memória alocada, impossibilitando a sua liberação
+    return 0;
+}
+Neste caso, a memória é alocada dinamicamente,
+mas a única referência para ela é perdida quando ptr 
+é definido como NULL. Como resultado, não há maneira
+de acessar essa memória para liberá-la mais tarde,
+causando um vazamento de memória.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
