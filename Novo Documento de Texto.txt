@@ -111,6 +111,12 @@ int main() {
 
 Questão 11:
 
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Questão 12:
+
 Comandos válidos:
 
 1. aloha[2] = value;: Atribui o valor da variável `value`
@@ -136,9 +142,12 @@ array inteiro a uma posição de um array multidimensional.
 6. `pf = aloha;`: Não é válido porque `pf` é um ponteiro para float, mas
 `aloha` é um array de floats. Para fazer isso, usamos `pf = &aloha[0];` para apontar
 para o primeiro elemento de `aloha`.
+
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Questão 12:
+Questão 13:
+
 Memory leak refere-se a um erro de programação
 em que uma aplicação aloca dinamicamente e falha em liberá-la
 quando não é mais necessária. O programa pode usar memoria excessiva
@@ -147,11 +156,6 @@ até mesmo travamento do sistema , devido à falta de memória disponível.
 
 A seguir está três exemplos de programas em C que apresenta 
 memory leaks:
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-Questão 13:
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
