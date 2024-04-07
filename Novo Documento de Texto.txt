@@ -103,7 +103,7 @@ Isso resultará em um comportamento mal definido.
 Questão 10:
 
 O código fornecido tem um erro. 
-Você está tentando modificar um valor constante, 
+por está tentando modificar um valor constante, 
 o que resultará em um erro de compilação.
 A modificação a um valor constante sem atribuir um 
 endereço de memória válido, impossibilita o uso do codigo.
