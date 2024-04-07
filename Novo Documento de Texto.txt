@@ -291,13 +291,167 @@ chamado `funcao` que aceita dois inteiros como argumentos e retorna um inteiro.
 
 Questão 15:
 
+#include <stdio.h>
+#include <stdlib.h>
+
+// Função para comparar dois floats para qsort
+int comparar(const void *a, const void *b) {
+    return (*(float *)a - *(float *)b);
+}
+
+// Função para ler e ordenar os valores
+void lerEOrdenar(float *valores, int n) {
+    // Lendo os valores
+    printf("Digite %d valores:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &valores[i]);
+    }
+
+    // Ordenando os valores usando qsort
+    qsort(valores, n, sizeof(float), comparar);
+
+    // Apresentando os valores em ordem crescente
+    printf("Valores em ordem crescente:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%.2f\n", valores[i]);
+    }
+}
+
+int main() {
+    int n;
+    printf("Digite a quantidade de valores a serem lidos: ");
+    scanf("%d", &n);
+
+    // Alocando memória dinamicamente para armazenar os valores
+    float *valores = (float *)malloc(n * sizeof(float));
+
+    if (valores == NULL) {
+        printf("Erro de alocação de memória.");
+        return 1;
+    }
+
+    lerEOrdenar(valores, n);
+
+    // Liberando a memória alocada
+    free(valores);
+
+    return 0;
+}
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 16:
 
+reimplementação do programa anterior utilizando a função `qsort()` do C, junto com comentários explicativos para cada linha:
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Função de comparação para qsort
+int comparar(const void *a, const void *b) {
+    // Convertendo os ponteiros genéricos para ponteiros de float
+    const float *ptr_a = (const float *)a;
+    const float *ptr_b = (const float *)b;
+    
+    // Comparando os valores apontados
+    if (*ptr_a < *ptr_b) {
+        return -1; // Retorna -1 se o primeiro valor for menor
+    } else if (*ptr_a > *ptr_b) {
+        return 1; // Retorna 1 se o primeiro valor for maior
+    } else {
+        return 0; // Retorna 0 se os valores forem iguais
+    }
+}
+
+int main() {
+    int n;
+    printf("Digite a quantidade de valores a serem lidos: ");
+    scanf("%d", &n);
+
+    // Alocando memória dinamicamente para armazenar os valores
+    float *valores = (float *)malloc(n * sizeof(float));
+
+    if (valores == NULL) {
+        printf("Erro de alocação de memória.");
+        return 1;
+    }
+
+    // Lendo os valores
+    printf("Digite %d valores:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%f", &valores[i]);
+    }
+
+    // Ordenando os valores usando qsort
+    qsort(valores, n, sizeof(float), comparar);
+
+    // Apresentando os valores em ordem crescente
+    printf("Valores em ordem crescente:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%.2f\n", valores[i]);
+    }
+
+    // Liberando a memória alocada
+    free(valores);
+
+    return 0;
+}
+
+
+Esse código é muito similar ao anterior, mas em vez de usar uma função customizada para ordenar os valores, ele utiliza a função `qsort()` da biblioteca padrão do C. A função `qsort()` recebe um ponteiro para o array, o número de elementos no array, o tamanho de cada elemento e uma função de comparação que determina a ordem dos elementos. No exemplo acima, a função `comparar()` é usada para comparar os valores float.
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 17:
+
+implementação de uma função que ordena um array de inteiros, usando a função `qsort()` do C e permitindo que o usuário forneça sua própria função de comparação:
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Protótipo da função de comparação
+typedef int (*CompararFunc)(const void *, const void *);
+
+// Função de comparação para ordenar inteiros
+int compararInteiros(const void *a, const void *b) {
+    const int *ptr_a = (const int *)a;
+    const int *ptr_b = (const int *)b;
+    
+    if (*ptr_a < *ptr_b) {
+        return -1;
+    } else if (*ptr_a > *ptr_b) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+// Função de ordenação personalizada
+void ordenarInteiros(int *array, size_t tamanho, CompararFunc comparar) {
+    qsort(array, tamanho, sizeof(int), comparar);
+}
+
+int main() {
+    int array[] = {5, 2, 8, 1, 9, 3};
+    size_t tamanho = sizeof(array) / sizeof(array[0]);
+
+    // Chamando a função de ordenação personalizada
+    ordenarInteiros(array, tamanho, compararInteiros);
+
+    // Apresentando os valores ordenados
+    printf("Valores em ordem crescente:\n");
+    for (size_t i = 0; i < tamanho; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+Neste exemplo, a função `ordenarInteiros` recebe um ponteiro para o array de inteiros, o tamanho do array e um ponteiro para a função de comparação. A função `compararInteiros` é usada como a função de comparação, mas você pode fornecer sua própria função de comparação personalizada conforme necessário. Isso oferece mais flexibilidade na ordenação dos elementos do array de inteiros.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
