@@ -135,6 +135,7 @@ cada elemento ocupará 4 bytes de memória.
 
 •Se x for declarado como (double x[4]), cada
 elemento ocupará 8 bytes de memória.
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 12:
@@ -229,13 +230,15 @@ de memória da alocação original de ptr1.
 Tendo em vista que, os exemplos acima, por falta de uma chamada 
 da função free(), resulta em uma repetitiva alocação de memória 
 sem liberação. Ocasionando um memory leak.
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 14:
 
 Um ponteiro para uma função é um tipo de variável 
-que armazena o endereço de memória de uma função. Isso permite que a função 
-seja referenciada e invocada indiretamente através do ponteiro.
+que armazena o endereço de memória de uma função. 
+Isso possibilita que a função seja indiretamente declarada e referida
+através de ponteiros.
 
 Aqui está um exemplo em C que demonstra o uso de um ponteiro para uma função:
 
@@ -283,6 +286,7 @@ chamado `funcao` que aceita dois inteiros como argumentos e retorna um inteiro.
 7. `funcao = subtracao;`: Atribui o endereço da função `subtracao` ao ponteiro `funcao`.
 8. `printf("Resultado da subtracao: %d\n", funcao(5, 3));`: Invoca a função 
 `subtracao` indiretamente através do ponteiro `funcao` e imprime o resultado.
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 15:
