@@ -87,7 +87,8 @@ Questão 9:
 Este software contém alguns erros sintáticos e lógicos.
 1 Não é possível iniciar membros de uma estrutura dentro de sua definição em C.
 2.Foi declarado um ponteiro para a estrutura struct teste, 
-mais não alocou memória para ela, antes de acessar seuss membros. Isso resultará em um comportamento mal definido.
+mais não alocou memória para ela, antes de acessar seuss membros. 
+Isso resultará em um comportamento mal definido.
 3. tentando acessar s->name, mas é nome, não name, o membro da estrutura. 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -96,7 +97,8 @@ Questão 10:
 O código fornecido tem um erro. 
 Você está tentando modificar um valor constante, 
 o que resultará em um erro de compilação.
-A modificação a um valor constante sem atribuir um endereço de memória válido, impossibilita o uso do codigo.
+A modificação a um valor constante sem atribuir um 
+endereço de memória válido, impossibilita o uso do codigo.
 um modo de corrigir o código seria essa alteração:
 
 #include <stdio.h>
