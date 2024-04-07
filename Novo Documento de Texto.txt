@@ -10,9 +10,11 @@ Verifica se p está apontando para o endereço de i
 Subtrai os valores armazenados nos ponteiros
 ◦ **&p;
 &p obtém o endereço de memória do ponteiro p.
-  com (*) desreferencia esse endereço, o que significa que estamos acessando o valor apontado pelo ponteiro p
+  com (*) desreferencia esse endereço, o que significa que estamos acessando o
+valor apontado pelo ponteiro p
 (endereço de memória de i), o valor de *p será o valor de i, que é 3.
-  Por fim, (*) desreferência novamente, o que significa que estamos acessando o valor apontado por *p, ou seja, o valor de i.
+  Por fim, (*) desreferência novamente, o que significa que estamos acessando
+o valor apontado por *p, ou seja, o valor de i.
 ◦ 3 - *p/(*q) + 7;
 (Está realizando a equação:
  3 - [elemento de P]/[elemento de Q] + 7
