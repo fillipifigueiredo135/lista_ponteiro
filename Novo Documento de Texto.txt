@@ -212,6 +212,23 @@ mas a única referência para ela é perdida quando ptr
 de acessar essa memória para liberá-la mais tarde,
 causando um vazamento de memória.
 
+Exemplo 3:#include <stdlib.h>
+
+int main() {
+    int *ptr1 = (int *)malloc(100 * sizeof(int));
+    int *ptr2 = (int *)malloc(100 * sizeof(int));
+    ptr1 = ptr2; // ptr1 agora aponta para a mesma memória que ptr2
+    free(ptr1); // Libera a memória apontada por ptr2, mas não a
+memória originalmente alocada para ptr1
+    return 0;
+}Neste exemplo, embora a memória alocada para ptr1 seja liberada, 
+a memória alocada originalmente para ptr1 é perdida, pois agora ptr1 e
+ptr2 apontam para a mesma região de memória. Isso resulta em um vazamento
+de memória da alocação original de ptr1.
+
+Tendo em vista que, os exemplos acima, por falta de uma chamada 
+da função free(), resulta em uma repetitiva alocação de memória 
+sem liberação. Ocasionando um memory leak.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 14:
