@@ -57,9 +57,47 @@ definida em termos de comportamento definido em C.
 
 Questão 4:
 
+A)
+Esse código coloca o ponteiro na posição de memória do int "valor" para poder modificar o número de "valor" realizando operações apenas com o ponteiro
+B) a mesma coisa da letra "A)", porém agora em ponto flutuante
+C)
+p3 = &nome[0];
+Essa função associa a posição de memoria do primeiro elemento da string "nome" com o ponteiro "p3" 
+
+A segunda iguala a variável "aux" com o primeiro elemento de "p3" fazendo que o "printf" mostre a primeira letra da string "nome"
+D)
+Iguala "p3" com o quinto elemento de "nome", depois iguala o primeiro elemento de p3 (Quinto elemento de "nome") a "Aux"
+E)
+iguala a posição de memória de "p3" com a posição de memória de "nome" e depois imprime o primeiro elemento de p3.
+(Que é o primeiro elemento de "nome")
+F)
+Iguala a posição de memória inicial de "p3" com o quinto elemento de "p3" 
+(Que já estava associado ao String "nome")
+Quando o novo primeiro elemento do ponteiro é mostrado no printf, o resultado é o antigo quinto elemento do ponteiro
+G)
+Decrementa uma posição de memória do ponteiro "p3" fazendo o novo primeiro elemento ser o quarto elemento do String "nome"
+H)
+(Praticamente a mesma coisa)
+.cria valores para o vetor 
+.associa "p4" com a posição de memória do primeiro elemento do vetor
+.iguala "idade" com o primeiro elemento de "p4"
+i)
+.Posição de memória inicial de "p5" = segunda posição de memória de "p4"
+."idade" = primeiro elemento de "p5"
+J)
+.Posição de memória inicial de "p4" = segunda posição de memória de "p5"
+."idade" = primeiro elemento de "p4"
+L) 
+.{posição de memória inicial do "P4"} = {posição de memória inicial de "P4" - 2}
+(Considerando que depois de uma série de operações, o elemento inicial do P4 estava apontando para o terceiro elemento do vetor, essa função da questão L faz com que P4 volte a apontar para o elemento inicial do vetor)
+M)
+Iguala a posição de memória inicial de "p5" com o {terceiro elemento do vetor - 1} fazendo com que "p5" aponte para o segundo elemento do vetor
+N)
+Incrementa uma posição de memória ao ponteiro "p5" fazendo ele apontar para o terceiro elemento de "vetor"
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Questão 5:
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
